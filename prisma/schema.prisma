@@ -20,7 +20,7 @@ model Product {
 model Client {
   id          String  @id @default(uuid())
   name        String
-  cep         Int?
+  cep         String
   home_number Int
   home_adress String?
   orders      Order[]

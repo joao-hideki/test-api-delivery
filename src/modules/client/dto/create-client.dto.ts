@@ -3,8 +3,7 @@ import {
   IsNumber,
   IsOptional,
   IsString,
-  Max,
-  Min,
+  Length,
 } from 'class-validator';
 
 export class CreateClientDto {
@@ -17,10 +16,9 @@ export class CreateClientDto {
   home_adress: string;
 
   @IsNotEmpty()
-  @IsNumber()
-  @Min(10000000)
-  @Max(99999999)
-  cep: number;
+  @IsString()
+  @Length(8, 8)
+  cep: string;
 
   @IsNotEmpty()
   @IsNumber()
