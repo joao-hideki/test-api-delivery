@@ -5,9 +5,10 @@ import { ClientRepository } from './repositories/client-repository';
 import { PrismaClientRepository } from './repositories/prisma/prisma-client-repository';
 import { ListAllClientsUseCase } from './use-cases/list-all-clients';
 import { UpdateClientUseCase } from './use-cases/update-client';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
-  imports: [],
+  imports: [HttpModule],
   controllers: [ProductsController],
   providers: [
     CreateClientUseCase,
