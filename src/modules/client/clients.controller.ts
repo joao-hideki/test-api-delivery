@@ -14,7 +14,7 @@ import { ListAllClientsUseCase } from './use-cases/list-all-clients';
 import { UpdateClientUseCase } from './use-cases/update-client';
 
 @Controller('/clients')
-export class ProductsController {
+export class ClientsController {
   constructor(
     private createClientUseCase: CreateClientUseCase,
     private listAllClientsUseCase: ListAllClientsUseCase,

@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ProductsController } from './clients.controller';
+import { ClientsController } from './clients.controller';
 import { CreateClientUseCase } from './use-cases/create-client';
 import { ClientRepository } from './repositories/client-repository';
 import { PrismaClientRepository } from './repositories/prisma/prisma-client-repository';
@@ -9,7 +9,7 @@ import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [HttpModule],
-  controllers: [ProductsController],
+  controllers: [ClientsController],
   providers: [
     CreateClientUseCase,
     ListAllClientsUseCase,
